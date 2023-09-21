@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Main {
@@ -40,17 +39,16 @@ public class Main {
         int resultThree = mainObj.add(numOne, numTwo, numThree, numFour);
         System.out.println("Sum of four numbers: " + resultThree);
 
+        scanner.nextLine(); // Consume the newline character
+
         System.out.print("Enter your name: ");
         String name = scanner.nextLine();
-
-        scanner.nextLine();
 
         System.out.print("Enter a message: ");
         String message = scanner.nextLine();
         mainObj.printMe(message);
 
-        System.out.print("Bonjour: "+ name);
-        String greeting = scanner.nextLine();
-        mainObj.printMe(name);
+        String greet = mainObj.greeting(name);
+        mainObj.printMe(greet);
     }
 }
